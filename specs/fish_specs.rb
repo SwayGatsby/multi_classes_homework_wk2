@@ -5,11 +5,13 @@ require("minitest/rg")
 class TestFish < MiniTest::Test
 
   def setup
-    @fishes = Fish.new(["trout", "salmon", "bass", "walleye"])
+    @fish1 = Fish.new("walleye")
+    @fish2 = Fish.new("trout")
   end
 
-  def test_get_fish_list
-    assert_equal(["trout", "salmon", "bass", "walleye"], @fishes.fish_list())
+  def test_get_fish_name
+    assert_equal(@fish1.name, "walleye")
   end
+
 
 end
